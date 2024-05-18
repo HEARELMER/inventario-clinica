@@ -8,7 +8,8 @@ import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { PersonalesComponent } from './pages/personales/personales.component';
 
 export const routes: Routes = [
-    {path:'login', component:LoginComponent, pathMatch:'full'},
+    {path:'', redirectTo:'/login', pathMatch:'full'},
+    {path:'login', component:LoginComponent},
     {path:'dashboard', component:DashboardComponent,
         children:[
             {path:'products', component:ProductsComponent},
