@@ -1,0 +1,40 @@
+<main class="flex flex-col  w-full h-screen">
+   <section class="flex m-auto shadow-lg rounded-xl ">
+    <form class="rounded-bl-xl rounded-tl-xl py-10 px-20 bg-white  border-purple-500 ">
+        <h1 class=" font-bold text-3xl text-center text-purple-500">Clínica tu corazon</h1>
+        <div class=" w-full  flex flex-col  mt-4 gap-1">
+    
+            <label for="">Id Usuario</label>
+            <div class="w-full flex items-center border-2 hover:border-purple-600 border-purple-500 rounded-lg px-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><path fill="#999999" d="M75.19 198.4a8 8 0 0 0 11.21-1.6a52 52 0 0 1 83.2 0a8 8 0 1 0 12.8-9.6a67.88 67.88 0 0 0-27.4-21.69a40 40 0 1 0-53.94 0A67.88 67.88 0 0 0 73.6 187.2a8 8 0 0 0 1.59 11.2M128 112a24 24 0 1 1-24 24a24 24 0 0 1 24-24m72-88H56a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16m0 192H56V40h144ZM88 64a8 8 0 0 1 8-8h64a8 8 0 0 1 0 16H96a8 8 0 0 1-8-8"/></svg>
+                <input type="text" placeholder=" Id Usuario" class=" w-full h-full   px-4 py-2 rounded-lg bg-transparent outline-none border-none">
+            </div>
+          
+        </div>
+        <div class="w-full  flex flex-col  mt-4 gap-1 ">
+            <label for="">Contraseña</label>
+            <div class=" w-full flex items-center border-2 hover:border-purple-600 border-purple-500 rounded-lg px-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#999999" d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2m6 3V10H6v10zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 0 1 5-5a5 5 0 0 1 5 5v2zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3"/></svg>
+                <input [(ngModel)]="user.password"
+                class="w-full h-full   px-4 py-2 rounded-lg bg-transparent outline-none border-none"
+                name="password"
+                  [type]="passwordVisible ? 'text' : 'password'"  [placeholder]="'Ingresa tu contraseña'" >
+                
+                <div class="icon" (click)="showPassword()">
+                    @if (passwordVisible) {
+    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 24 24"><path fill="#999999"  d="M12 3c5.392 0 9.878 3.88 10.819 9c-.94 5.12-5.427 9-10.819 9c-5.392 0-9.878-3.88-10.818-9C2.122 6.88 6.608 3 12 3m0 16a9.005 9.005 0 0 0 8.778-7a9.005 9.005 0 0 0-17.555 0A9.005 9.005 0 0 0 12 19m0-2.5a4.5 4.5 0 1 1 0-9a4.5 4.5 0 0 1 0 9m0-2a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5"/></svg>
+                    }@else {
+        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 16 16"><path fill="#999999"  fill-rule="evenodd" d="M3.03 1.97a.75.75 0 0 0-1.06 1.06l.83.83A8.206 8.206 0 0 0 .5 6.876l-.26.585a1.328 1.328 0 0 0 0 1.079l.26.585a8.208 8.208 0 0 0 11.434 3.87l1.036 1.035a.75.75 0 1 0 1.06-1.06zm7.788 9.908l-1.294-1.293a3 3 0 0 1-4.109-4.109L3.866 4.927A6.707 6.707 0 0 0 1.87 7.486L1.641 8l.23.515a6.708 6.708 0 0 0 8.947 3.363M6.55 7.611A1.502 1.502 0 0 0 8.389 9.45zm1.658-2.604l2.784 2.784a3 3 0 0 0-2.784-2.784m5.92 3.508a6.704 6.704 0 0 1-.915 1.496l1.065 1.066A8.203 8.203 0 0 0 15.5 9.125l.26-.585a1.328 1.328 0 0 0 0-1.08l-.26-.584A8.208 8.208 0 0 0 5.572 2.37L6.81 3.61a6.708 6.708 0 0 1 7.32 3.877l.228.514l-.228.515Z" clip-rule="evenodd"/></svg>
+                    }
+                </div>
+            </div>
+
+        </div>
+        <button [routerLink]="['/dashboard']"  class="w-full mt-20 font-semibold px-10 py-2 rounded-lg text-white bg-purple-500">Iniciar sesión</button>
+       
+    </form>
+    <img class=" w-96 h-auto rounded-r-xl" src="https://inhouse.feban.net/wp-content/uploads/2021/02/4930343-scaled.jpg" alt="">
+   </section>
+</main>

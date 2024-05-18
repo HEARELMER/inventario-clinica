@@ -1,0 +1,17 @@
+<main>
+   
+    <div class="user" [routerLink]="'profile'">
+        <img src="{{admin.photo_profile}}" alt="perfil de usuario">
+        <h1>{{admin.username}}
+            <button (click)="viewmoreInfo()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#A855F7" d="M12 14.95q-.2 0-.375-.062t-.325-.213l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213T12 14.95"/></svg>
+            </button>
+        </h1>
+       @if (moreInfo) {
+        <div class="more">
+            <h1 class="text-bg-slate-500">{{admin.email}}</h1>
+            <h2 class="font-bold text-yellow-300 text-lg">Administrador</h2>
+        </div>
+       }
+    </div>
+</main>

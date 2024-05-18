@@ -1,0 +1,17 @@
+main{
+    @apply flex justify-end items-center  bg-purple-200 h-full px-4;
+
+    .user{
+        @apply flex items-center cursor-pointer ;
+        img{
+            @apply w-8 h-8 rounded-full;
+        }
+        h1{
+            @apply flex items-center text-white ml-2;
+        }
+    }
+
+    .more{
+        @apply absolute top-14 bg-slate-700 px-6 py-3 right-2 rounded-[20px] shadow-lg;
+    }
+}

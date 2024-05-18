@@ -1,0 +1,63 @@
+<main class=" w-full h-full flex flex-col lg:flex-row justify-center gap-4 items-center">
+    <section class=" shadow-lg ">
+        <table>
+        
+                <thead class=" bg-purple-500 text-white ">
+                    <th>RUC</th>
+                    <th>Razon</th>
+                    <th>Telefono</th>
+                    <th>Direccipon</th>
+                    <th>Representante</th>
+                    <th>Departamento</th>
+                    <th>País</th>
+                </thead>
+                <tbody >
+                   @for (item of proveedores; track $index) {
+                    <tr class=" border-t-2 ">
+                        <td>{{item.ruc}}</td>
+                        <td>{{item.razon}}</td>
+                        <td>{{item.telefono}}</td>
+                        <td>{{item.direc}}</td>
+                        <td>{{item.repre}}</td>
+                        <td>{{item.depart}}</td>
+                        <td>{{item.pais}}</td>
+                       
+                    </tr>
+                   }
+                </tbody>
+           
+        </table>
+    </section>
+    <section class=" bg-white rounded-xl py-10 px-5  max-w-[350px] shadow-lg">
+       
+        <h1 class=" font-bold text-3xl">Registrar proveedor</h1>
+        <form class=" flex flex-col gap-2">
+            <div class=" flex flex-col gap-2 mt-2">
+                <label class=" font-semibold " for="">Ruc proveedor</label>
+                <input type="text" placeholder=" RUC proveeder" class=" focus:border-purple-500 focus:border-2 outline-none py-1 px-4 border border-slate-200 rounded-lg">
+            </div>
+            <div class=" flex flex-col gap-2 mt-2">
+                <label class=" font-semibold " for="">Razon social</label>
+                <input type="text" placeholder=" Razon social" class=" focus:border-purple-500 focus:border-2 outline-none py-1 px-4 border border-slate-200 rounded-lg">
+            </div>
+            <div class=" flex flex-col gap-2 mt-2">
+                <label class=" font-semibold " for="">Telefono</label>
+                <input type="tel" placeholder=" Número telefono" class=" focus:border-purple-500 focus:border-2 outline-none py-1 px-4 border border-slate-200 rounded-lg">
+            </div>
+            <div class=" flex flex-col gap-2 mt-2">
+                <label class=" font-semibold " for="">Direccion</label>
+                <input type="text" placeholder=" Dirección" class=" focus:border-purple-500 focus:border-2 outline-none py-1 px-4 border border-slate-200 rounded-lg">
+            </div>
+            <div class=" flex flex-col gap-2 mt-2">
+                <label class=" font-semibold " for="">Representante</label>
+                <input type="text" placeholder=" Representante" class=" focus:border-purple-500 focus:border-2 outline-none py-1 px-4 border border-slate-200 rounded-lg">
+            </div>
+            <div class=" flex flex-col gap-2 mt-2">
+                <label class=" font-semibold " for="">Departamento/País</label>
+                <input type="text" placeholder=" Ayacucho / Perú" class=" focus:border-purple-500 focus:border-2 outline-none py-1 px-4 border border-slate-200 rounded-lg">
+            </div>
+
+            <input type="submit" value="Guardar" class=" bg-purple-500 rounded-xl  cursor-pointer hover:bg-purple-400 duration-300 ease-in-out w-full mt-4 px-4 py-2 text-white font-semibold">
+        </form>
+    </section>
+</main>

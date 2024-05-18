@@ -1,0 +1,84 @@
+main{
+    @apply bg-purple-500 h-[100vh] absolute
+    top-0  w-[300px] flex flex-col gap-2 ;
+}
+
+.logo{
+    @apply flex items-center gap-4 m-4;
+}
+
+
+ul{
+    @apply flex flex-col gap-2 justify-center items-start m-3 ;
+    li{
+        @apply w-full p-2 rounded-lg ;
+    }
+    li,  svg, path{
+        @apply flex items-center gap-4 cursor-pointer hover:fill-purple-500 hover:text-purple-500 text-white font-medium;       
+    }
+    
+}
+
+li:hover{
+    @apply bg-slate-100 w-full duration-300 ease-in-out;
+    svg{
+        animation: animate-bell-swing 1s infinite ease-in-out;
+        path{
+            @apply fill-purple-500
+        }
+    }
+}
+.menu{
+    @apply w-full flex mt-3 justify-end px-3;
+}
+
+main.show-menu{
+    @apply items-center relative;
+    a{
+        display: none ;
+    }
+    .menu{
+        @apply justify-center;
+    }
+    .profile-name{
+        display: none;
+    }
+
+    .logo h1{
+        display: none;
+    }
+    @apply w-full  ;
+}
+
+.menu-active{
+    @apply absolute left-[110px];
+}
+@media(max-width: 800px) {
+    .logo,ul{
+        display: none;
+    }
+    ul.show-menu{
+     display: block;
+    }
+
+    .logo.show-menu{
+        @apply flex ;
+    }
+    .menu-active{
+        @apply left-4;
+    }
+}
+
+
+
+@keyframes animate-bell-swing {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
