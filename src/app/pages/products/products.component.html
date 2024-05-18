@@ -1,19 +1,32 @@
 <section class="productsBox">
-    <div class="productNew">
-        <form action="" method="POST">
-            <h3>NUEVO PRODUCTO</h3>
-            <div class="entrada">
-                <input type="text" placeholder="Nombre" required />
-            </div>
-            <div class="entrada">
-                <input type="text" placeholder="Descripción" required />
-            </div>
-            <div class="entrada">
-                <input type="text" placeholder="Unidad" required />
-            </div>
-            <button>Crear</button>
-        </form>
+ 
+    <div class="w-full flex gap-4 ">
+        <button class=" bg-purple-500 text-white font-semibold " (click)="nuevo()">Nuevo producto</button>
+        <button class=" bg-purple-500 text-white font-semibold " [routerLink]="'../categorias'"> Nueva categoria</button>
     </div>
+    @if (visible) {
+        <div class="productNew" >
+            <form action="" method="POST">
+                <div class="entrada">
+                    <input type="text" placeholder="Nombre" required />
+                </div>
+                <div class="entrada">
+                    <input type="text" placeholder="Descripción" required />
+                </div>
+                <div class="entrada">
+                    <input type="text" placeholder="Unidad" required />
+                </div>
+                <div class="entrada">
+                   <select name="categoria" id="">
+                         <option value="1">Categoria 1</option>
+                         <option value="2">Categoria 2</option>
+                         <option value="3">Categoria 3</option>
+                   </select>
+                </div>
+                <button >Crear</button>
+            </form>
+        </div>
+    }
     <div class="busqueda">
         <input type="search">
         <label for="search"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607"/></svg></label>

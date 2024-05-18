@@ -16,27 +16,7 @@ export class EntradasComponent {
       dni:718188818,
       document:'boleta'
     },
-    {id:7189,
-      des:'no se que poner aqui en la decripcion',
-      fecha:'12-05-2024',
-      ruc:718882,
-      dni:718188818,
-      document:'boleta'
-    },
-    {id:7189,
-      des:'no se que poner aqui en la decripcion',
-      fecha:'12-05-2024',
-      ruc:718882,
-      dni:718188818,
-      document:'boleta'
-    },
-    {id:7189,
-      des:'no se que poner aqui en la decripcion',
-      fecha:'12-05-2024',
-      ruc:718882,
-      dni:718188818,
-      document:'boleta'
-    },
+  
     {id:7189,
       des:'no se que poner aqui en la decripcion',
       fecha:'12-05-2024',
