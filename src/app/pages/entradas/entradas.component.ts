@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-entradas',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './entradas.component.html',
   styleUrl: './entradas.component.scss'
 })

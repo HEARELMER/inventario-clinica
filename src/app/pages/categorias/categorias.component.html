@@ -1,36 +1,48 @@
-<section class="w-full lg:w-[450px] h-full">
-    <div class="container mx-auto px-4">
-        <div class="max-w-md mx-auto bg-white bg-opacity-90 rounded-lg shadow-lg p-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Registro de Entrada</h2>
-            <div class="grid grid-cols-1 gap-4">
-                <div>
-                    <label for="id-entrada" class="block text-gray-800">ID de Entrada</label>
-                    <input type="text" id="id-entrada" name="id-entrada" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400" placeholder="Ingrese el ID de la entrada">
-                </div>
-                <div>
-                    <label for="descripcion" class="block text-gray-800">Descripción</label>
-                    <input type="text" id="descripcion" name="descripcion" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400" placeholder="Ingrese la descripción">
-                </div>
-                <div>
-                    <label for="fecha-entrada" class="block text-gray-800">Fecha de la Entrada</label>
-                    <input type="date" id="fecha-entrada" name="fecha-entrada" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400">
-                </div>
-                <div>
-                    <label for="id-proveedor" class="block text-gray-800">RUC del proveedor</label>
-                    <input type="text" id="id-proveedor" name="id-proveedor" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400" placeholder="Ingrese el RUC del proveedor">
-                </div>
-                <!-- <div>
-                    <label for="id-personal" class="block text-gray-800">DNI del Personal</label>
-                    <input type="text" id="id-personal" name="id-personal" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400" placeholder="Ingrese el DNI del personal">
-                </div> -->
-                <div>
-                    <label for="factura-proveedor" class="block text-gray-800">Documento de Entrada</label>
-                    <input type="text" id="factura-proveedor" name="factura-proveedor" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400" placeholder="Ingrese la fador">
-                </div>
-            </div>
-            <div class="flex justify-center mt-6">
-                <button class="bg-purple-500 text-white w-full py-2 px-4 rounded-md hover:bg-purple-400 hover:text-white">Registrar</button>
-            </div>
+<main class="w-full flex flex-col lg:flex-row gap-6 lg:gap-0 px-6 lg:px-20 mb-20 h-full items-center lg:justify-center py-10">
+    <div>
+        <div class="overflow-x-auto rounded-lg">
+            <table class="w-full shadow-lg text-center bg-white">
+                <thead class="bg-purple-500 text-white">
+                    <tr>
+                        <th>ID CATEGORIA</th>
+                        <th>DESCRIPCION</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of categorias; track $index) {
+                    <tr class="border-t-2">
+                        <td>{{item.id_cat}}</td>
+                        <td>{{item.descripcion}}</td>
+                        <td class="flex gap-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                <path fill="#000000" d="M12 17q.425 0 .713-.288T13 16v-4q0-.425-.288-.712T12 11t-.712.288T11 12v4q0 .425.288.713T12 17m0-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8" />
+                            </svg>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-</section>
+    <section class="w-full lg:w-[450px]">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto bg-white bg-opacity-90 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Crear nueva categoría</h2>
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label for="id-categ" class="block text-gray-800">ID de Categoría</label>
+                        <input type="text" id="id-categ" name="id-categ" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400" placeholder="Ingrese el ID de la categoría">
+                    </div>
+                    <div>
+                        <label for="descripcion" class="block text-gray-800">Descripción</label>
+                        <input type="text" id="descripcion" name="descripcion" class="form-input p-2 mt-1 block w-full rounded-md bg-gray-100 text-gray-800 border border-gray-300 focus:outline-none focus:ring-purple-400 focus:border-purple-400" placeholder="Ingrese la descripción">
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <button class="bg-purple-500 text-white w-full py-2 px-4 rounded-md hover:bg-purple-400 hover:text-white">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

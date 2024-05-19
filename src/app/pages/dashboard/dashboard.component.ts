@@ -14,7 +14,7 @@ export class DashboardComponent {
   constructor(private router: Router){}
 
   ngOnInit(){
-    // this.router.navigate(['./dashboard/products'])
-    this.router.navigate(['./dashboard/entradas'])
+    this.router.navigate(['./dashboard/products'])
+    // this.router.navigate(['./dashboard/entradas'])
   }
 }

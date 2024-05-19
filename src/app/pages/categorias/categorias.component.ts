@@ -8,5 +8,27 @@ import { Component } from '@angular/core';
   styleUrl: './categorias.component.scss'
 })
 export class CategoriasComponent {
-
+  categorias:any[]= [
+    {
+      id_cat: 555,
+      descripcion:'DESCRIP CATEGORIA',
+    },
+  
+    {
+      id_cat: 555,
+      descripcion:'DESCRIP CATEGORIA',
+    },
+    {
+      id_cat: 555,
+      descripcion:'DESCRIP CATEGORIA',
+    },
+    {
+      id_cat: 555,
+      descripcion:'DESCRIP CATEGORIA',
+    },
+    {
+      id_cat: 555,
+      descripcion:'DESCRIP CATEGORIA',
+    }
+  ]
 }

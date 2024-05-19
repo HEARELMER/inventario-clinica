@@ -1,8 +1,14 @@
 <section class="productsBox">
- 
-    <div class="w-full flex gap-4 ">
-        <button class=" bg-purple-500 text-white font-semibold " (click)="nuevo()">Nuevo producto</button>
-        <button class=" bg-purple-500 text-white font-semibold " [routerLink]="'../categorias'"> Nueva categoria</button>
+    <h2>Productos</h2>
+    <div class="flex w-full">
+        <div class="w-full flex justify-center flex-wrap gap-4 ">
+            <button class=" bg-purple-500 text-white font-semibold h-[2.5rem]" [routerLink]="'../categorias'"> Nueva categoria</button>
+            <div class="busqueda">
+                <input type="search">
+                <label for="search"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607"/></svg></label>
+            </div>
+            <button class=" bg-purple-500 text-white font-semibold h-[2.5rem]" (click)="nuevo()">Nuevo producto</button>
+        </div>
     </div>
     @if (visible) {
         <div class="productNew" >
@@ -27,10 +33,6 @@
             </form>
         </div>
     }
-    <div class="busqueda">
-        <input type="search">
-        <label for="search"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607"/></svg></label>
-    </div>
 </section>
 <div class="products">
     <div class="item">

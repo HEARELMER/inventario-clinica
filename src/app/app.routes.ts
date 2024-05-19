@@ -6,6 +6,8 @@ import { EntradasComponent } from './pages/entradas/entradas.component';
 import { ProveedoresComponent } from './pages/proveedores/proveedores.component';
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { PersonalesComponent } from './pages/personales/personales.component';
+import { DetEntradasComponent } from './pages/det-entradas/det-entradas.component';
+import { RolesComponent } from './pages/roles/roles.component';
 
 export const routes: Routes = [
     {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -17,7 +19,8 @@ export const routes: Routes = [
             {path:'proveedores', component:ProveedoresComponent},
             {path:'categorias', component:CategoriasComponent},
             {path:'personales', component:PersonalesComponent},
-
+            {path:'det_entrada', component:DetEntradasComponent},
+            {path:'roles', component:RolesComponent}
         ]
     }
 ];
